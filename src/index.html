@@ -8,20 +8,48 @@
     <meta name="description" content="TODO: A starter project for ..." />
 
     <link rel="stylesheet" href="./stylesheets/main.css" />
+    <script type="module" src="./javascripts/main.js"></script>
   </head>
 
   <body>
-    <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5">
-      <span class="d-block py-5">
-        <i class="bi bi-filetype-html text-primary"></i>
-        <i class="bi bi-filetype-css text-danger"></i>
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
+    <div class="container">
+      <h1 class="text-center mt-5">Guest Book</h1>
+      <form method="post" >
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="fname">First Name</label>
+              <input type="text" class="form-control" id="fname" aria-describedby="emailHelp">
 
-      Welcome to CS 2350!
-    </h1>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="lname">Last Name</label>
+              <input type="text" class="form-control" id="lname">
+          </div>
 
-    <script type="module" src="./javascripts/main.js"></script>
+          <button type="submit" class="btn btn-primary">Add a guest</button>
+          <button type="button" class="btn btn-secondary">Reset</button>
+      </form>
+      
+
+      <div class="d-flex mb-3 mt-5">
+
+          <h1 style="flex: 1;">Registered Guest</h1>
+      <button type="button" class="btn btn-danger">Delete</button>
+
+      </div>
+
+      <table class="table" id="guests">
+          <thead>
+              <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+              </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+      </table>
+
+  </div>
+
   </body>
 </html>
